@@ -1,0 +1,43 @@
+============================== prooftrans ============================
+Prover9 (32) version Dec-2007, Dec 2007.
+Process 8816 was started by ROHITH PEDDI on DESKTOP-T2S851L,
+Wed Nov 11 11:47:48 2020
+The command was "/cygdrive/c/Program Files (x86)/Prover9-Mace4/bin-win32/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.00 (+ 0.01) seconds.
+% Length of proof is 23.
+% Level of proof is 6.
+% Maximum clause weight is 0.
+% Given clauses 0.
+
+1 Lawyer(John) | -Date(Mary,John) # label(non_clause) # label(goal).  [goal].
+2 -Biker(x) | Rides(x,f(x)).  [assumption].
+3 -Rides(x,y) | -Harley(y) | Rough(x).  [assumption].
+4 -Rides(x,y) | -BMW(y) | Yuppie(x).  [assumption].
+5 Biker(John).  [assumption].
+6 -Biker(x) | Harley(f(x)) | BMW(f(x)).  [assumption].
+7 -Biker(x) | -Harley(f(x)) | Rough(x).  [resolve(2,b,3,a)].
+8 -BMW(f(x)) | Yuppie(x) | -Biker(x).  [resolve(4,a,2,b)].
+9 -BMW(f(John)) | Yuppie(John).  [resolve(8,c,5,a)].
+10 -Yuppie(x) | Lawyer(x).  [assumption].
+11 Nice(Mary).  [assumption].
+12 -Nice(x) | -Rough(y) | -Date(x,y).  [assumption].
+13 -BMW(f(John)) | Lawyer(John).  [resolve(9,b,10,a)].
+14 -Lawyer(John).  [deny(1)].
+15 -Rough(x) | -Date(Mary,x).  [resolve(11,a,12,a)].
+16 Date(Mary,John).  [deny(1)].
+17 -Harley(f(John)) | Rough(John).  [resolve(7,a,5,a)].
+18 Harley(f(John)) | BMW(f(John)).  [resolve(5,a,6,a)].
+19 Rough(John) | BMW(f(John)).  [resolve(17,a,18,a)].
+20 -BMW(f(John)).  [resolve(13,b,14,a)].
+21 Rough(John).  [resolve(19,b,20,a)].
+22 -Rough(John).  [resolve(15,b,16,a)].
+23 $F.  [resolve(21,a,22,a)].
+
+============================== end of proof ==========================

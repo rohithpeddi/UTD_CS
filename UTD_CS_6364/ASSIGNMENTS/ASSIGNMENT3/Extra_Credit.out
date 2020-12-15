@@ -1,0 +1,62 @@
+============================== prooftrans ============================
+Prover9 (32) version Dec-2007, Dec 2007.
+Process 23656 was started by ROHITH PEDDI on DESKTOP-T2S851L,
+Mon Nov  9 22:14:08 2020
+The command was "/cygdrive/c/Program Files (x86)/Prover9-Mace4/bin-win32/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.00 (+ 0.06) seconds.
+% Length of proof is 42.
+% Level of proof is 8.
+% Maximum clause weight is 2.
+% Given clauses 0.
+
+1 -Wise(x) | -Young(x) | -Pig(x) | -Balloonist(x) # label(non_clause) # label(goal).  [goal].
+2 -Liable_to_giddiness(x) | -Wise(x) | -Dances_on_tightropes(x).  [assumption].
+3 Dances_on_tightropes(x) | Eats_pennybuns(x) | Old(x).  [assumption].
+4 -Fat(x) | -Looks_ridiculous(x) | Dances_on_tightropes(x) | Eats_lunch_in_public(x).  [assumption].
+5 Dances_on_tightropes(x) | -Treated_with_respect(x) | Fat(x).  [assumption].
+6 Pig(c1).  [deny(1)].
+7 -Pig(x) | -Liable_to_giddiness(x) | Treated_with_respect(x).  [assumption].
+8 -Pig(x) | -Has_umbrella(x) | Looks_ridiculous(x).  [assumption].
+9 Wise(c1).  [deny(1)].
+10 -Wise(x) | -Balloonist(x) | Has_umbrella(x).  [assumption].
+11 -Liable_to_giddiness(x) | -Wise(x) | Eats_pennybuns(x) | Old(x).  [resolve(2,c,3,a)].
+12 -Liable_to_giddiness(x) | -Wise(x) | -Fat(x) | -Looks_ridiculous(x) | Eats_lunch_in_public(x).  [resolve(2,c,4,c)].
+13 -Treated_with_respect(x) | Fat(x) | -Liable_to_giddiness(x) | -Wise(x).  [resolve(5,a,2,c)].
+14 -Has_umbrella(c1) | Looks_ridiculous(c1).  [resolve(6,a,8,a)].
+15 -Looks_ridiculous(x) | -Eats_pennybuns(x) | -Eats_lunch_in_public(x).  [assumption].
+16 -Liable_to_giddiness(c1) | -Fat(c1) | -Looks_ridiculous(c1) | Eats_lunch_in_public(c1).  [resolve(12,b,9,a)].
+17 Balloonist(c1).  [deny(1)].
+18 -Balloonist(x) | -Young(x) | Liable_to_giddiness(x).  [assumption].
+19 -Balloonist(c1) | Has_umbrella(c1).  [resolve(9,a,10,a)].
+20 -Young(x) | -Old(x).  [assumption].
+21 Young(x) | Old(x).  [assumption].
+22 Young(c1).  [deny(1)].
+23 -Young(c1) | Liable_to_giddiness(c1).  [resolve(17,a,18,a)].
+24 Liable_to_giddiness(c1) | Old(c1).  [resolve(23,a,21,a)].
+25 -Liable_to_giddiness(c1) | Treated_with_respect(c1).  [resolve(6,a,7,a)].
+26 -Liable_to_giddiness(c1) | Eats_pennybuns(c1) | Old(c1).  [resolve(11,b,9,a)].
+27 -Treated_with_respect(c1) | Fat(c1) | -Liable_to_giddiness(c1).  [resolve(13,d,9,a)].
+28 -Liable_to_giddiness(c1) | -Fat(c1) | Eats_lunch_in_public(c1) | -Has_umbrella(c1).  [resolve(16,c,14,b)].
+30 Has_umbrella(c1).  [resolve(19,a,17,a)].
+31 -Has_umbrella(c1) | -Eats_pennybuns(c1) | -Eats_lunch_in_public(c1).  [resolve(14,b,15,a)].
+32 Old(c1) | -Fat(c1) | Eats_lunch_in_public(c1) | -Has_umbrella(c1).  [resolve(24,a,28,a)].
+34 Old(c1) | -Treated_with_respect(c1) | Fat(c1).  [resolve(24,a,27,c)].
+35 Old(c1) | Treated_with_respect(c1).  [resolve(24,a,25,a)].
+38 -Eats_pennybuns(c1) | -Eats_lunch_in_public(c1).  [resolve(30,a,31,a)].
+39 Old(c1) | Eats_pennybuns(c1) | Old(c1).  [resolve(24,a,26,a)].
+40 Old(c1) | Fat(c1) | Old(c1).  [resolve(34,b,35,b)].
+41 Old(c1) | -Fat(c1) | Eats_lunch_in_public(c1).  [resolve(32,d,30,a)].
+44 Old(c1) | Old(c1) | Old(c1) | Eats_lunch_in_public(c1).  [resolve(40,b,41,b)].
+45 -Eats_lunch_in_public(c1) | Old(c1) | Old(c1).  [resolve(38,a,39,b)].
+47 -Old(c1).  [resolve(22,a,20,a)].
+48 Old(c1) | Old(c1) | Old(c1) | Old(c1) | Old(c1).  [resolve(44,d,45,a)].
+49 $F.  [copy(48),merge(b),merge(c),merge(d),merge(e),unit_del(a,47)].
+
+============================== end of proof ==========================

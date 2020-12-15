@@ -1,0 +1,14 @@
+formulas(assumptions).   % synonym for formulas(sos).
+	-Rides(x,y) | -Harley(y) | Rough(x).
+	-Biker(x) | Rides(x,f(x)).
+	-Biker(x) | Harley(f(x)) | BMW(f(x)).
+	-Rides(x,y) | -BMW(y) | Yuppie(x).
+	-Yuppie(x) | Lawyer(x).
+	-Nice(x) | -Rough(y) | -Date(x,y).
+	Nice(Mary).
+	Biker(John).
+end_of_list.
+
+formulas(goals).         % to be negated and placed in the sos list
+	Lawyer(John) | -Date(Mary, John).
+end_of_list.

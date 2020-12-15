@@ -1,0 +1,14 @@
+formulas(assumptions).   % synonym for formulas(sos).
+	-American(x) | -Weapon(y) | -Sells(x,y,z) | -Hostile(z) | Criminal(x).
+	-Missile(x) | -Owns(Nono, x) | Sells(West, x, Nono).
+	-Enemy(x, America) | Hostile(x).
+	-Missile(x) | Weapon(x).
+	Owns(Nono, M1).
+	Missile(M1).
+	American(West).
+	Enemy(Nono, America).
+end_of_list.
+
+formulas(goals).         % to be negated and placed in the sos list
+	Criminal(West).
+end_of_list.

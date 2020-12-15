@@ -1,0 +1,11 @@
+formulas(assumptions).   % synonym for formulas(sos).
+	B & C -> A.
+	B.
+	D & E -> C.
+	E | F.
+	D & -F.
+end_of_list.
+
+formulas(goals).         % to be negated and placed in the sos list
+	A.
+end_of_list.

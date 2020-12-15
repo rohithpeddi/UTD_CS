@@ -1,0 +1,1 @@
+[Current Player : P1 | Father Node : None | Action : None | Current node : to_move : P1, board : {'P1': (1, 1), 'P2': (4, 1), 'P3': (4, 4), 'P4': (1, 4)} | MINIMAX = {'P1': '?', 'P2': '?', 'P3': '?', 'P4': '?'} ] 

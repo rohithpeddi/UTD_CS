@@ -1,0 +1,17 @@
+formulas(assumptions).   % synonym for formulas(sos).
+	Dances_on_tightropes(x) | Eats_pennybuns(x) | Old(x).
+	-Pig(x)|-Liable_to_giddiness(x) | Treated_with_respect(x).
+	-Wise(x) | -Balloonist(x) | Has_umbrella(x).
+	-Looks_ridiculous(x) | -Eats_pennybuns(x) | -Eats_lunch_in_public(x).
+	-Balloonist(x) | -Young(x) | Liable_to_giddiness(x).
+	-Fat(x) | -Looks_ridiculous(x) | Dances_on_tightropes(x) | Eats_lunch_in_public(x).
+	-Liable_to_giddiness(x) | -Wise(x) | -Dances_on_tightropes(x).
+	-Pig(x) | -Has_umbrella(x) | Looks_ridiculous(x).
+	Dances_on_tightropes(x) | -Treated_with_respect(x) | Fat(x).
+	Young(x) | Old(x).
+	-Young(x) | -Old(x).
+end_of_list.
+
+formulas(goals).         % to be negated and placed in the sos list
+	-Wise(x) | -Young(x) | -Pig(x) | -Balloonist(x).
+end_of_list.
