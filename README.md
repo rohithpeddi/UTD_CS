@@ -1,5 +1,5 @@
 # UTD_CS
-UTD CS Courses and assignments
+UTD CS Courses - [assignments, exams]
 
 1. FALL 2019 UTD_CS_3341 - COMPUTER ARCHITECTURE [Prof. Nhut Nyugen]
 2. FALL 2019 UTD_CS_5343 - ALGORITHMS AND DATA STRUCTURES [Prof. Neeraj Gupta]
